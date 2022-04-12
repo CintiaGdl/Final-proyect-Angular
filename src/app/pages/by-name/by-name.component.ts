@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ByNameService } from 'src/app/by-name.service';
 
 @Component({
@@ -7,11 +7,18 @@ import { ByNameService } from 'src/app/by-name.service';
   styleUrls: ['./by-name.component.css']
 })
 export class ByNameComponent implements OnInit {
+  @ViewChild('txtInput') txtInput!: ElementRef<HTMLInputElement>
 
   get results() {
     return this.byNameService.results;
    } 
    
+   search() {
+     console.log(this.txtInput.nativeElement.value)
+
+     this.byNameService.resultsApi(this.txtInput.nativeElement.value)
+   }
+
    constructor(private byNameService: ByNameService) { 
      this.byNameService.resultsApi();
    }
