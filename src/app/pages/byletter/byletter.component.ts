@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ByLetterService } from 'src/app/by-letter.service';
 
 @Component({
@@ -8,15 +9,22 @@ import { ByLetterService } from 'src/app/by-letter.service';
 })
 export class ByletterComponent implements OnInit {
 
+  // @ViewChild('value') value!: ElementRef<HTMLOptionElement>
+
   get results() {
     return this.byLetterService.results;
    } 
    
-   constructor(private byLetterService: ByLetterService) { 
+   /* getValue() {
+     console.log(document.querySelector('option')?.value) 
+   } */
+
+   constructor(private byLetterService: ByLetterService, private activeRoute: ActivatedRoute) { 
      this.byLetterService.resultsApi();
    }
 
   ngOnInit(): void {
+    console.log(this.activeRoute) 
   }
 
 }
