@@ -5,6 +5,7 @@
     margin: 20px;
 }
 .card {
+    cursor: pointer;
     background-color: aquamarine;
     border-radius: 20px;
     min-width: 300px;

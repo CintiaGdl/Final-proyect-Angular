@@ -2,13 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ByNameComponent } from './pages/by-name/by-name.component';
 import { ByletterComponent } from './pages/byletter/byletter.component';
+import { DetailComponent } from './pages/detail/detail.component';
 import { RandomComponent } from './pages/random/random.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: RandomComponent
-  },
   {
     path: 'home',
     component: RandomComponent
@@ -20,6 +17,14 @@ const routes: Routes = [
   {
     path: 'byname',
     component: ByNameComponent
+  },
+  {
+    path: 'detail/:id',
+    component: DetailComponent
+  },
+  {
+    path: '**',
+    component: RandomComponent
   }
 ];
 

@@ -22,4 +22,9 @@ export class ByNameService {
 
 
   }
+
+  getDetail(id: string): any {
+    return this.results.find(({idDrink}) => idDrink === id)
+  }
+
 }

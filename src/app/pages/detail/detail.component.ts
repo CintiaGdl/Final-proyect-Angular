@@ -10,12 +10,18 @@ import { ByNameService } from 'src/app/by-name.service';
 })
 export class DetailComponent implements OnInit {
 
+  card!: any;
+
   constructor(private byLetterService: ByLetterService, private byNameService: ByNameService, 
     private activeRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.activeRoute.params.subscribe(params => {
-      console.log(params)
+      // console.log(this.activeRoute)
+      // console.log(params)
+      const {id} = params
+      this.card = this.byNameService.getDetail(id)
+      console.log(this.card)
     })
   }
 
