@@ -10,14 +10,12 @@ import { ByLetterService } from 'src/app/by-letter.service';
 })
 export class ByletterComponent implements OnInit {
 
-  // @ViewChild('select') select!: ElementRef<HTMLOptionElement>
-  // selectLetter: string = 'a'
+  @ViewChild('select') select!: ElementRef<HTMLOptionElement>
 
   options: any [] = [
-    { name: 'a', value: 'a'},
-    { name: 'b', value: 'b'},
+    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'v', 'w', 'y', 'z'
   ]
-  // selectLetter = 'a'
+  selectLetter = ''
 
 
   get results() {
@@ -25,7 +23,9 @@ export class ByletterComponent implements OnInit {
    } 
    
    selected() {
-     console.log(document.querySelector('select')!.value) 
+    //  console.log(document.querySelector('select')!.value)
+    //  console.log(this.select.nativeElement.value)
+     this.byLetterService.resultsApi(this.select.nativeElement.value)
    }
 
    constructor(private byLetterService: ByLetterService, private activeRoute: ActivatedRoute) { 

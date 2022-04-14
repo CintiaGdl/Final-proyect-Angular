@@ -1,6 +1,6 @@
 <label for="so">Search by first letter</label> <br/>
-<select  (change)="selected()">
-  <option *ngFor="let item of options" [value]="item.value">{{item.value}}</option>
+<select  (change)="selected()" #select>
+  <option *ngFor="let item of options" [value]="item">{{item}}</option>
 </select>
 
 
