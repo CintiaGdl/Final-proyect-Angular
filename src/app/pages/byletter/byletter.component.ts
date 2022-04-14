@@ -1,3 +1,4 @@
+import { query } from '@angular/animations';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ByLetterService } from 'src/app/by-letter.service';
@@ -9,22 +10,30 @@ import { ByLetterService } from 'src/app/by-letter.service';
 })
 export class ByletterComponent implements OnInit {
 
-  // @ViewChild('value') value!: ElementRef<HTMLOptionElement>
+  // @ViewChild('select') select!: ElementRef<HTMLOptionElement>
+  // selectLetter: string = 'a'
+
+  options: any [] = [
+    { name: 'a', value: 'a'},
+    { name: 'b', value: 'b'},
+  ]
+  // selectLetter = 'a'
+
 
   get results() {
     return this.byLetterService.results;
    } 
    
-   /* getValue() {
-     console.log(document.querySelector('option')?.value) 
-   } */
+   selected() {
+     console.log(document.querySelector('select')!.value) 
+   }
 
    constructor(private byLetterService: ByLetterService, private activeRoute: ActivatedRoute) { 
      this.byLetterService.resultsApi();
    }
 
   ngOnInit(): void {
-    console.log(this.activeRoute) 
+    // console.log(this.activeRoute) 
   }
 
 }
