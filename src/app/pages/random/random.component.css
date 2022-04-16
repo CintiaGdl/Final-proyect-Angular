@@ -1,9 +1,12 @@
-.gallery {
+.container {
+    background-color: rgb(229, 229, 229);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 20px;
+    flex-direction: column;
 }
+
 .card {
     background-color: aquamarine;
     border-radius: 20px;
@@ -13,8 +16,13 @@
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    margin: 20px;
+    margin: 30px;
+    margin-left: 0px;
 }
 img {
     max-width: 200px;
+    border-radius: 151px;
+}
+h2 {
+    font-family: 'Fredericka the Great', cursive;
 }

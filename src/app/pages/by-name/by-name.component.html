@@ -1,17 +1,20 @@
-<div class="search">
-    <input 
-    (keyup)="search()"
-    type="text"
-    #txtInput
-    placeholder="Search by name...">
-</div>
-
-<div class="gallery">
-    <div *ngFor="let item of results">
-        <div class="card" routerLink="/detail/{{item.idDrink}}">
-            <h2>{{item.strDrink}}</h2>
-            <img src={{item.strDrinkThumb}} alt={{item.strDrink}}>
+<div class="container">
+    <div class="search">
+        <input 
+        (keyup)="search()"
+        type="text"
+        #txtInput
+        placeholder="Search by name...">
+    </div>
+    
+    <div class="gallery">
+        <div *ngFor="let item of results">
+            <div class="card" routerLink="/detail/{{item.idDrink}}">
+                <h2>{{item.strDrink}}</h2>
+                <img src={{item.strDrinkThumb}} alt={{item.strDrink}}>
+            </div>
         </div>
+    
     </div>
 
 </div>

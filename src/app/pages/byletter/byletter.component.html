@@ -1,15 +1,19 @@
-<label for="so">Search by first letter</label> <br/>
-<select  (change)="selected()" #select>
-  <option *ngFor="let item of options" [value]="item">{{item}}</option>
-</select>
-
-
-<div class="gallery">
-    <div *ngFor="let item of results">
-        <div class="card">
-            <h2>{{item.strDrink}}</h2>
-            <img src={{item.strDrinkThumb}} alt={{item.strDrink}}>
+<div class="container">
+    <label for="so">Search by first letter</label> <br/>
+    <select  (change)="selected()" #select>
+      <option *ngFor="let item of options" [value]="item">{{item}}</option>
+    </select>
+    
+    
+    <div class="gallery">
+        <div *ngFor="let item of results">
+            <div class="card">
+                <h2>{{item.strDrink}}</h2>
+                <img src={{item.strDrinkThumb}} alt={{item.strDrink}}>
+            </div>
         </div>
+    
     </div>
 
 </div>
+

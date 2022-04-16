@@ -1,5 +1,13 @@
-<p>detail works!</p>
 <div class="card">
-    <h2>{{card.strDrink}}</h2>
-    <img [src]="card.strDrinkThumb" alt="card.strDrink" class="imgDetail">
+    <div class="title">
+        <h2>{{card.strDrink}}</h2>
+        <img [src]="card.strDrinkThumb" alt="card.strDrink" class="imgDetail">
+    </div>
+    <div class="details">
+        <h3>Category: </h3>
+        <h3 class="data">{{card.strCategory}}</h3>
+        <h3>Instructions: </h3>
+            <h3 class="data">{{card.strInstructions}}</h3>
+
+    </div>
 </div>
