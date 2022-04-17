@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+// import { HttpClient } from '@angular/common/http';
+import { RandomService } from 'src/app/random.service';
 
 @Component({
   selector: 'app-random',
@@ -8,22 +9,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class RandomComponent implements OnInit {
 
-  public results: any[] = []
-
-  constructor(private http: HttpClient) { 
-    
-    this.http.get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
-    .subscribe((resp: any) => {
-      this.results = resp.drinks;
-      console.log(resp.drinks)
-    })
+  get results() {
+    return this.randomService.results;
   }
 
-  resultsApi() {
-
-    
-    
+  constructor(private randomService: RandomService) { 
+    this.randomService.resultsApi();
   }
+
   
   ngOnInit(): void {
 
