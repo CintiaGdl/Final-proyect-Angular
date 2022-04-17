@@ -19,7 +19,10 @@ export class ByLetterService {
       this.results = resp.drinks;
       console.log(resp.drinks)
     })
-
-
   }
+
+  getDetail(id: string): any {
+    return this.results.find(({idDrink}) => idDrink === id)
+  }
+
 }

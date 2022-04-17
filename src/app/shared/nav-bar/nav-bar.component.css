@@ -10,6 +10,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    /* position: fixed; */
 }
 .elementContainer {
     display: flex;

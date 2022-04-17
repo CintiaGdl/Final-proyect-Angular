@@ -20,7 +20,7 @@ export class DetailComponent implements OnInit {
       // console.log(this.activeRoute)
       // console.log(params)
       const {id} = params
-      this.card = this.byNameService.getDetail(id)
+      this.card = this.byNameService.getDetail(id) || this.byLetterService.getDetail(id)
       console.log(this.card)
     })
   }
