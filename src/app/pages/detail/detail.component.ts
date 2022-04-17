@@ -13,6 +13,8 @@ export class DetailComponent implements OnInit {
 
   card!: any;
 
+  listIngredient: string [] = [];
+
   constructor(private byLetterService: ByLetterService, private byNameService: ByNameService, 
     private randomService: RandomService, private activeRoute: ActivatedRoute) { }
 
@@ -23,6 +25,13 @@ export class DetailComponent implements OnInit {
       const {id} = params
       this.card = this.byNameService.getDetail(id) || this.byLetterService.getDetail(id) || this.randomService.getDetail(id)
       console.log(this.card)
+
+      for (let i = 1; i <= 15; i++) {
+        const ingredient = this.card[`strIngredient${i}`];
+        this.listIngredient.push(ingredient);
+      }
+
+
     })
   }
 
