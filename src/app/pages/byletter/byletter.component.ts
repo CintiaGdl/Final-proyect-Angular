@@ -17,6 +17,15 @@ export class ByletterComponent implements OnInit {
   ]
   selectLetter = ''
 
+  classCard(alcholic: string) {
+    if (alcholic === 'Non alcoholic')
+      alcholic = 'nonAlcoholic';
+      if (alcholic === 'Optional alcohol')
+      alcholic = 'optionalAlcoholic'
+      if (alcholic === 'Alcoholic')
+      alcholic = 'alcoholic'
+    return alcholic;
+   }
 
   get results() {
     return this.byLetterService.results;

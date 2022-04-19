@@ -10,7 +10,7 @@
     
     <div class="gallery">
         <div *ngFor="let item of results">
-            <div class="card" routerLink="/detail/{{item.idDrink}}">
+            <div [class]="classCard(item.strAlcoholic)" routerLink="/detail/{{item.idDrink}}">
                 <h2>{{item.strDrink}}</h2>
                 <img src={{item.strDrinkThumb}} alt={{item.strDrink}}>
             </div>

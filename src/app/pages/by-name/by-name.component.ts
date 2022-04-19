@@ -19,6 +19,16 @@ export class ByNameComponent implements OnInit {
      this.byNameService.resultsApi(this.txtInput.nativeElement.value)
    }
 
+   classCard(alcholic: string) {
+    if (alcholic === 'Non alcoholic')
+      alcholic = 'nonAlcoholic';
+      if (alcholic === 'Optional alcohol')
+      alcholic = 'optionalAlcoholic'
+      if (alcholic === 'Alcoholic')
+      alcholic = 'alcoholic'
+    return alcholic;
+   }
+
    constructor(private byNameService: ByNameService) { 
      this.byNameService.resultsApi();
    }

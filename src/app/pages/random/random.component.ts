@@ -13,6 +13,16 @@ export class RandomComponent implements OnInit {
     return this.randomService.results;
   }
 
+  classCard(alcholic: string) {
+    if (alcholic === 'Non alcoholic')
+      alcholic = 'nonAlcoholic';
+      if (alcholic === 'Optional alcohol')
+      alcholic = 'optionalAlcoholic'
+      if (alcholic === 'Alcoholic')
+      alcholic = 'alcoholic'
+    return alcholic;
+   }
+
   constructor(private randomService: RandomService) { 
     this.randomService.resultsApi();
   }
