@@ -7,14 +7,19 @@
     flex-wrap: nowrap;
     margin: 20px;
     padding-bottom: 30px;
+    justify-content: space-evenly;
+    padding-right: 10px;
 }
 .nonAlcoholic {
     background-color: rgb(5, 68, 97);
+    color: rgb(229, 229, 229);
 }
 .alcoholic {
+    color: rgb(5, 68, 97);
     background-color: rgb(252, 163, 17);
 }
 .optionalAlcoholic {
+    color: black;
     background-color: rgb(188, 57, 8);
 }
 .title {
