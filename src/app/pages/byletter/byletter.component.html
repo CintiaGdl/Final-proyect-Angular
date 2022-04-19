@@ -1,8 +1,11 @@
 <div class="container">
-    <label for="so">Search by first letter</label> <br/>
-    <select  (change)="selected()" #select>
-      <option *ngFor="let item of options" [value]="item">{{item}}</option>
-    </select>
+    <div class="selectContainer">
+        <label for="so">Search by first letter</label> <br/>
+        <select  (change)="selected()" #select>
+          <option *ngFor="let item of options" [value]="item">{{item}}</option>
+        </select>
+
+    </div>
     
     
     <div class="gallery">

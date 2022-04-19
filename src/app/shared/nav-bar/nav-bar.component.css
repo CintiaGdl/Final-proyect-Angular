@@ -18,7 +18,7 @@ h1 {
     flex-wrap: wrap;
     width: 90%;
     justify-content: space-evenly;
-    margin: 20px;
+    margin: 10px;
 }
 .navElement {
     cursor: pointer;
@@ -31,4 +31,5 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 5px;
 }

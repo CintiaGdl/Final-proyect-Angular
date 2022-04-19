@@ -4,3 +4,10 @@ h1 {
     font-family: 'Fredericka the Great', cursive;
 }
 
+.navBar {
+    position: fixed;
+    width: 100%;
+}
+.router {
+    margin-top: 140px;
+}
