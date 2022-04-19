@@ -15,6 +15,16 @@ export class DetailComponent implements OnInit {
 
   listIngredient: string [] = [];
 
+  classCard(alcholic: string) {
+    if (alcholic === 'Non alcoholic')
+      alcholic = 'nonAlcoholic';
+      if (alcholic === 'Optional alcohol')
+      alcholic = 'optionalAlcoholic'
+      if (alcholic === 'Alcoholic')
+      alcholic = 'alcoholic'
+    return alcholic;
+   }
+
   constructor(private byLetterService: ByLetterService, private byNameService: ByNameService, 
     private randomService: RandomService, private activeRoute: ActivatedRoute) { }
 
